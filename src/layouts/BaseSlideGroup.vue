@@ -58,7 +58,7 @@
 <script setup lang="ts">
 import { onMounted } from "vue";
 import { ref } from "vue";
-import { getRequest } from "../services/apiCall.ts";
+import { getRequest } from "../services/apiCall";
 interface AnimeData {
   images: {
     jpg: {

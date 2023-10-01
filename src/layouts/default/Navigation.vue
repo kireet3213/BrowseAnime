@@ -17,7 +17,7 @@
               <v-btn icon v-bind="props">
                 <v-avatar color="#7C4DFF" size="large">
                   <v-img
-                    src="Saitama_serious_profile.webp"
+                    :src="SaitamaSerious"
                     max-height="50"
                     width="10px"
                     id="menu-activator"
@@ -53,8 +53,10 @@
 import { ref } from "vue";
 import LeftDrawerComponent from "@/components/LeftDrawerComponent.vue";
 import BaseAutoCompleteSearch from "../BaseAutoCompleteSearch.vue";
+import SaitamaSeriousPic from '@/assets/Saitama_serious_profile.webp'
 
 const drawer = ref(false);
+const SaitamaSerious = SaitamaSeriousPic as any;
 </script>
 <style scoped>
 
