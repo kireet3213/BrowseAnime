@@ -3,7 +3,7 @@
     <v-carousel-item
       v-for="(item, i) in items"
       :key="i"
-      :src="item.src"
+      :src="getImageUrl(item.src)"
       cover
       max-height:300px
     >
@@ -16,5 +16,10 @@ interface Props {
   items: Array<{ src: string }>;
 }
 defineProps<Props>();
+function getImageUrl(name:string) {
+  console.log(new URL(`../assets/${name}`, import.meta.url).href);
+
+  return new URL(`../assets/${name}`, import.meta.url).href
+}
 </script>
 <style></style>
