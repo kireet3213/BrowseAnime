@@ -1,12 +1,15 @@
 <template>
   <v-app-bar density="comfortable" :elevation="2">
-    <v-container fluid class="pa-0">
+    <v-container fluid class="pa-2">
       <v-row align="center" justify="end" no-gutters>
         <v-col class="d-flex align-center justify-space-between">
           <v-app-bar-nav-icon
             @click.stop="drawer = !drawer"
           ></v-app-bar-nav-icon>
           <v-app-bar-title>Browse Your Favourite Anime</v-app-bar-title>
+        </v-col>
+        <v-col class="d-flex  mt-5">
+          <BaseAutoCompleteSearch />
         </v-col>
         <v-col class="d-flex justify-end">
           <v-menu min-width="100px">
@@ -49,6 +52,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import LeftDrawerComponent from "@/components/LeftDrawerComponent.vue";
+import BaseAutoCompleteSearch from "../BaseAutoCompleteSearch.vue";
 
 const drawer = ref(false);
 </script>
